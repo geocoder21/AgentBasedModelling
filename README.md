@@ -52,13 +52,13 @@ update  | agents carry out their functions (above) for the defined number of ite
 run | agents are created and the plot animated 
 create_agents | sheep and wolves created using slider values, coordinated obtained from web and allocated to agents
 
-| Main programme  | |
+|   | Main programme|
 |----------|-------|  
-1.  | enviroment created from csv file
-2. | GUI pane created and defined
-3. | Menu bar and sliders added to GIU pane
-4. | 'Run' command associated with menu to allow execution
-5. | End environment written out as csv file
+1  | enviroment created from csv file
+2 | GUI pane created and defined
+3 | Menu bar and sliders added to GIU pane
+4 | 'Run' command associated with menu to allow execution
+5 | End environment written out as csv file
 
 The update function moves the sheep and wolves at random.  The sheep eat the environment and share with neighbours, whereas the wolves eat the sheep.  The results are plotted and animated with a scatterplot.  In my code sheep are represented by white dots and wolves by red dots.  
 
