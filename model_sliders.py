@@ -17,7 +17,7 @@ import Environment
 # MODEL PARAMETERS
 num_sheep = 10
 num_wolves = 2
-iterations = 100
+iterations = 50
 sheep = []
 wolves = []
 neighbourhood = 20
@@ -38,13 +38,15 @@ def update(frame_number):
             sheep[i].eat()
             sheep[i].share_with_neighbours(neighbourhood)
 
+            
 # move wolves at random and get them to 'eat' the agents
 # update number of remaining sheep as sheep_left
         for i in range(num_wolves):
             random.shuffle(wolves)
             wolves[i].move()
             sheep_left = wolves[i].eat_sheep()
-
+            # print(sheep_left)             # Test that sheep_left reduces
+        
 # plot and animate the results
 # sheep coloured in white, wolves in red
     plt.ylim(0, 99)                        # y dimension limit
@@ -57,14 +59,49 @@ def update(frame_number):
 
 # run function
 def run():
+    create_agents()
     animation = animate.FuncAnimation(fig, update, interval=1, repeat=False, 
                                       frames=iterations)
     canvas.draw()
 
-# slider function
-def slider():
-    num_sheep = tkinter.Scale(root, text=sheep_slider.get()).pack()
-    num_wolves = tkinter.Scale(root, text=wolf_slider.get()).pack()
+
+# create agents function
+def create_agents():
+    global sheep_slider
+    global wolf_slider
+    global num_sheep
+    global num_wolves
+    
+    # get agent parameters from sliders
+    num_sheep = sheep_slider.get()
+    num_wolves = wolf_slider.get()
+    
+    # download y and x data from web
+    # extract for use in positioning agents
+    mydata = requests.get('https://www.geog.leeds.ac.uk/courses/computing/practicals/python/agent-framework/part9/data.html')
+    content = mydata.text
+    soup = bs4.BeautifulSoup(content, 'html.parser')
+    mydata_y = soup.find_all(attrs={"class": "y"})
+    mydata_x = soup.find_all(attrs={"class": "x"})
+    # print(mydata_y)                               # Test download of y
+    # print(mydata_x)                               # Test download of x
+
+    # Create sheep within environment, using y and x classes
+    for i in range(num_sheep):
+        y = int(mydata_y[i].text)
+        x = int(mydata_x[i].text)
+        sheep.append(agentframework.Sheep(current_environment, sheep, y, x))
+        # print(y, x)                               # Test print sheep coordinates
+        # print()
+    
+    # create wolves within environment, using y and x classes
+    for i in range(num_wolves):
+        y = int(mydata_y[num_sheep+i].text)
+        x = int(mydata_x[num_sheep+i].text)
+        wolves.append(agentframework.Wolves(sheep, y, x))
+        # print(y, x)                               # Test print wolf coordinates
+        
+
 
 # ****************************************************************************
 # MAIN PROGRAMME
@@ -73,42 +110,13 @@ def slider():
 # set up backend correctly before fig is created
 matplotlib.use('TkAgg')
 
-# download y and x data from web
-# extract for use in positioning agents
-mydata = requests.get('https://www.geog.leeds.ac.uk/courses/computing/practicals/python/agent-framework/part9/data.html')
-content = mydata.text
-soup = bs4.BeautifulSoup(content, 'html.parser')
-mydata_y = soup.find_all(attrs={"class": "y"})
-mydata_x = soup.find_all(attrs={"class": "x"})
-# print(mydata_y)                               # Test download of y
-# print(mydata_x)                               # Test download of x
-
 
 # create an environment for the agents
 # NB update filename to use a different csv dataset
 current_environment = Environment.create_environment('in.txt')
 
-
-# Create sheep within environment, using y and x classes
-for i in range(num_sheep):
-    y = int(mydata_y[i].text)
-    x = int(mydata_x[i].text)
-    sheep.append(agentframework.Sheep(current_environment, sheep, y, x))
-    # print(y, x)                               # Test print sheep coordinates
-    # print()
-
-# create wolves within environment, using y and x classes
-for i in range(num_wolves):
-    y = int(mydata_y[num_sheep+i].text)
-    x = int(mydata_x[num_sheep+i].text)
-    wolves.append(agentframework.Wolves(sheep, y, x))
-    # print(y, x)                               # Test print wolf coordinates
-    
 carry_on = True
 
-# print descriptive text for user
-print("Sheep are white, wolves are red")
-print()
 
 # GUI code
 root = tkinter.Tk()
@@ -130,22 +138,26 @@ model_menu = tkinter.Menu(menu_bar)
 menu_bar.add_cascade(label="Model", menu=model_menu)
 model_menu.add_command(label="Run model", command=run)
 
-# add sliders to change parameters
+
+# add sheep slider to change number of sheep at start
 sheep_slider = tkinter.Scale(root, from_ = 1, to = 20, orient=tkinter.HORIZONTAL, 
-                             variable=num_sheep)
+                             label="Sheep")
 sheep_slider.pack(padx=5, pady=5)
-sheep_button = tkinter.Button(root, text = "Number of sheep", 
-                            command = slider)
-sheep_button.pack()
 
+# add wolf slider to change number of wolves at start
 wolf_slider = tkinter.Scale(root, from_ = 1, to = 10, orient=tkinter.HORIZONTAL,
-                            variable=num_wolves)
+                            label="Wolves")
 wolf_slider.pack(padx=5, pady=5)
-wolf_button = tkinter.Button(root, text = "Number of wolves", 
-                            command = slider)
-wolf_button.pack()
 
+
+# print descriptive text for user
+# print("Sheep are white, wolves are red")
+# print()
+
+
+# application mainloop
 tkinter.mainloop()  # Wait for interactions.
+
 
 # doctest
 # test by typing 'python model_final.py -v' in command prompt
