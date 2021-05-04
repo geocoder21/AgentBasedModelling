@@ -32,7 +32,7 @@ The version with sliders is the more up to date, however the simple model has be
 The model is organised into imports, parameters, functions, and then the main programme.  
 
 | Imports  | Info|
-|----------|-------|  
+|:----------|:-------|  
 tkinter    | GUI user inferface
 matplotlib | plotting library
 matplotlib.pyplot | to allow plotting of environment and agents
@@ -47,13 +47,13 @@ Environment | Environment (as above)
 N.B. The model parameters are set at 10 sheep and 2 wolves, with 100 iterations, but this can be adjusted for different results.
 
 | Functions  | Info|
-|----------|-------|  
+|:----------|:-------|  
 update  | agents carry out their functions (above) for the defined number of iterations, results are plotted
 run | agents are created and the plot animated 
 create_agents | sheep and wolves created using slider values, coordinated obtained from web and allocated to agents
 
 |   | Main programme|
-|----------|-------|  
+|:----------|:-------|  
 1  | enviroment created from csv file
 2 | GUI pane created and defined
 3 | Menu bar and sliders added to GIU pane
