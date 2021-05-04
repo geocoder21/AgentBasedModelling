@@ -7,7 +7,7 @@ Testing was also carried out using the print function at critical points within 
 #### Parameters
 Parameters can be manually adjusted within the code.  If these are significantly increased then processing requirements are increased and the code is slow to run.  Where parameters are set to zero this prevents correct execution. 
 #### Figure 1
-When the model is run the animation runs within the GUI, but a second pane (labelled Figure 1) also opens as a blank window.  Efforts to remove this broke the code so it is currently an accepted issue.
+When the model is executed through Spyder the animation runs within the GUI, but a second pane (labelled Figure 1) also opens as a blank window.  The programme runs correctly through Command Prompt, and since efforts to remove this issue broke the code it is currently an accepted issue.
 
 ## Ideas for further development
 
