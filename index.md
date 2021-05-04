@@ -1,37 +1,13 @@
-## Welcome to GitHub Pages
+# Agent Based Modelling - A Story of Sheep and Wolves
 
-You can use the [editor on GitHub](https://github.com/geocoder21/githubintro/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+<h2> The Task</h2>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+I am currently learning Python as part of a Geographical Information Science Masters degree through the University of Leeds.  Our coding skills need to have a spatial application, and hence we were tasked with creating of an agent based model which contained three principal elements:
+1.  Some 'agents'
+2.  An environment within which the agents exist
+3.  A model which allows the agents to interact with each other
 
-### Markdown
+<h2> My solution </h2>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+To see my solution please visit the code repository here: [https://github.com/geocoder21/githubintro](https://github.com/geocoder21/githubintro)
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/geocoder21/githubintro/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
