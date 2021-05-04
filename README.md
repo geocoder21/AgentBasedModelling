@@ -30,42 +30,13 @@ There are two versions of the model in the repository:
 The version with sliders is the more up to date, however the simple model has been included for reference.
 
 The model is organised into imports, parameters, functions, and then the main programme.  
+N.B. starting parameters are set at 10 sheep and 2 wolves, with 100 iterations, but this can be adjusted for different results.
 
-| Imports  | Info|
-|:----------|:-------|  
-tkinter    | GUI user inferface
-matplotlib | plotting library
-matplotlib.pyplot | to allow plotting of environment and agents
-matplotlib.animation | to produce plot animation within a GUI
-random | random number generator
-requests | HTTP library
-bs4 | BeautifulSoup
-agentframework | Agents (as above)
-Environment | Environment (as above)
+#### model functionality
 
-  
-N.B. The model parameters are set at 10 sheep and 2 wolves, with 100 iterations, but this can be adjusted for different results.
+Agents (sheep and wolves) are created and allocated a starting position, using data obtained from [a website](https://www.geog.leeds.ac.uk/courses/computing/practicals/python/agent-framework/part9/data.html), using BeautifulSoup to extract x and y classes.
 
-| Functions  | Info|
-|:----------|:-------|  
-update  | agents carry out their functions (above) for the defined number of iterations, results are plotted
-run | agents are created and the plot animated 
-create_agents | sheep and wolves created using slider values, coordinated obtained from web and allocated to agents
-
-|   | Main programme|
-|:----------|:-------|  
-1  | enviroment created from csv file
-2 | GUI pane created and defined
-3 | Menu bar and sliders added to GIU pane
-4 | 'Run' command associated with menu to allow execution
-5 | End environment written out as csv file
-
-The update function moves the sheep and wolves at random.  The sheep eat the environment and share with neighbours, whereas the wolves eat the sheep.  The results are plotted and animated with a scatterplot.  In my code sheep are represented by white dots and wolves by red dots.  
-
-The main programme obtains starting coordinate data for the sheep from a webpage, using BeautifulSoup to extract x and y classes.  Wolf starting positions are created in a similar manner, but adding the number of sheep to coordinate data to prevent duplication with sheep positions.  The programme initiates a Graphical User Interface in order to run the model.  The run command starts the animation for the set number of iterations.  As the model runs the number of remaining sheep is printed.  Finally the updated environment is written out as a csv file.
-
-
-
+ The programme initiates a Graphical User Interface in order to run the model. Numbers of sheep and wolves are selected using sliders, and the run command starts the animation for the set number of iterations.  The update function moves the sheep and wolves at random.  The sheep eat the environment and share with neighbours, whereas the wolves eat the sheep. The results are plotted and animated with a scatterplot.  In my code sheep are represented by white dots and wolves by red dots. As the model runs the number of remaining sheep is printed.  Finally the updated environment is written out as a csv file.
 
 Below is a screenshot of the plot after the model has run: in this instance there were 6 sheep left when the model completed.
 
