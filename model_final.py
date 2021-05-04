@@ -128,6 +128,8 @@ model_menu.add_command(label="Run model", command=run)
 
 tkinter.mainloop()  # Wait for interactions.
 
+# doctest
+# to run type 'python -m doctest -v model_final.py' in Command Prompt
 if __name__ == "__main__":
     import doctest
     doctest.testmod()
