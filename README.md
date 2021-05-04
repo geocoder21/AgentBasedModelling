@@ -13,13 +13,13 @@ I am currently learning Python as part of a Geographical Information Science Mas
 
 I created two agent classes - sheep and wolves. These were established with a set of characteristics and functions as required by their actions within the programme - such as randomly generated x and y coordinates and the ability to move around their environment.  Sheep were given the ability to 'eat' their environment and to share stores with each other, whilst wolves were given the ability to eat sheep that came within a set distance.  In order to allow interaction between agents I also included Pythagorean distance calculations.
 
-The code can be viewed in <a href="https://github.com/geocoder21/AgentBasedModelling/blob/main/agentframework.py">agentframework.py</a>
+The code can be viewed in <a href="https://github.com/geocoder21/githubintro/agentframework.py">agentframework.py</a>
 
 ### 2. The environment
 
 The environment within which the agents exist is imported through a csv reader.  The dataset is organised into float values within rows, effectively creating a grid with a value for each square.  I also included a function to write out an output csv file for the updated environment, once the values had been 'eaten' as the model runs.
 
-The code can be viewed in <a href="https://github.com/geocoder21/AgentBasedModelling/blob/main/Environment.py">Environment.py</a>
+The code can be viewed in <a href="https://github.com/geocoder21/githubintro/Environment.py">Environment.py</a>
 
 ### 3. The model
 
@@ -31,7 +31,7 @@ The update function moves the sheep and wolves at random.  The sheep eat the env
 
 The main programme obtains starting coordinate data for the sheep from a webpage, using BeautifulSoup to extract x and y classes.  Wolf starting positions are created in a similar manner, but adding the number of sheep to coordinate data to prevent duplication with sheep positions.  The programme initiates a Graphical User Interface in order to run the model.  The run command starts the animation for the set number of iterations.  As the model runs the number of remaining sheep is printed.  Finally the updated environment is written out as a csv file.
 
-The code can be viewed in <a href="https://github.com/geocoder21/AgentBasedModelling/blob/main/model_final.py">model_final.py</a>
+The code can be viewed in <a href="https://github.com/geocoder21/githubintro/model_final.py">model_final.py</a>
 
 Below is a screenshot of the plot after the model has run: in this instance there were 6 sheep left when the model completed.
 
