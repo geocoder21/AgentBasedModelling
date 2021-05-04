@@ -10,4 +10,4 @@ I am currently learning Python as part of a Geographical Information Science Mas
 <h2> My solution </h2>
 
 To see my solution please visit the code repository here: 
-<a href="https://github.com/geocoder21/AgentBasedModelling">AgentBasedModelling repository</a>
+<a href="https://github.com/geocoder21/githubintro">https://github.com/geocoder21/githubintro</a>
