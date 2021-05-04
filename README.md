@@ -53,7 +53,8 @@ The code was developed using Spyder but could be run using any Python IDE.
 - model_sliders.py         <i> Model - with user input parameters </i>
 - agentframework.py        <i> Agent class code </i>
 - Environment.py           <i> Environment code </i>
-- in.txt                   <i> Environment data in csv format </i>
+- in.txt                   <i> Environment data input, in csv format </i>
+- dataout.txt              <i> Environment data output, in csv format </i>
 - Readme.md                <i> This document </i>
 - Development.md           <i> Development of the model and further ideas</i>
 - License                  <i> MIT license </i>
