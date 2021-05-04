@@ -52,10 +52,10 @@ The code was developed using Spyder but could be run using any Python IDE.
 
 ### Repository contents
 <pre>
-- model_simple.py          <i> Model - with preset parameters </i>
 - model_sliders.py         <i> Model - with user input parameters </i>
 - agentframework.py        <i> Agent class code </i>
 - Environment.py           <i> Environment code </i>
+- model_simple.py          <i> Model - with preset parameters </i>
 - in.txt                   <i> Environment data input, in csv format </i>
 - dataout.txt              <i> Environment data output, in csv format </i>
 - Readme.md                <i> This document </i>
