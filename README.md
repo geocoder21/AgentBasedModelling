@@ -31,11 +31,14 @@ The update function moves the sheep and wolves at random.  The sheep eat the env
 
 The main programme obtains starting coordinate data for the sheep from a webpage, using BeautifulSoup to extract x and y classes.  Wolf starting positions are created in a similar manner, but adding the number of sheep to coordinate data to prevent duplication with sheep positions.  The programme initiates a Graphical User Interface in order to run the model.  The run command starts the animation for the set number of iterations.  As the model runs the number of remaining sheep is printed.  Finally the updated environment is written out as a csv file.
 
-The code can be viewed in [model_final.py](https://github.com/geocoder21/githubintro/blob/main/model_final.py)
+There are two versions of the model in the repository:
+- a version with set input parameters [model_simple.py](https://github.com/geocoder21/githubintro/blob/main/model_simple.py)
+- a version with sliders, allowing the user to define starting parameters [model_sliders.py](https://github.com/geocoder21/githubintro/blob/main/model_sliders.py)
+
 
 Below is a screenshot of the plot after the model has run: in this instance there were 6 sheep left when the model completed.
 
-![](plotscreesnhot.jpeg)
+![Simple model](plotscreesnhot.jpeg)
 
 
 ## Code repository
