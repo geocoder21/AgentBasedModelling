@@ -23,17 +23,43 @@ The code can be viewed in [Environment.py](https://github.com/geocoder21/githubi
 
 ### 3. The model
 
+There are two versions of the model in the repository:
+- a version with sliders, allowing the user to define starting parameters [model_sliders.py](https://github.com/geocoder21/githubintro/blob/main/model_sliders.py)
+- a version with set input parameters [model_simple.py](https://github.com/geocoder21/githubintro/blob/main/model_simple.py)
+
+The version with sliders is the more up to date, however the simple model has been included for reference.
+
 The model is organised into imports, parameters, functions, and then the main programme.  
-- The imports include the agentframework file (containing agent classes) and Environment file.  
-- N.B. The model has been set up for 10 sheep and 2 wolves, with 100 iterations, but this can be adjusted for different results.
+
+| Imports  | Info|
+|----------|-------|  
+tkinter    | GUI user inferface
+matplotlib | plotting library
+matplotlib.pyplot | to allow plotting of environment and agents
+matplotlib.animation | to produce plot animation within a GUI
+random | random number generator
+requests | HTTP library
+bs4 | BeautifulSoup
+agentframework | Agents (as above)
+Environment | Environment (as above)
+
+  
+N.B. The model parameters are set at 10 sheep and 2 wolves, with 100 iterations, but this can be adjusted for different results.
+
+| Functions  | Info|
+|----------|-------|  
+update  | agents carry out their functions (above) for the defined number of iterations
+        | results are plotted
+run | agents are created and the plot animated 
+create_agents | sheep and wolves created using slider values
+                | coordinated obtained from web and allocated to agents
+
 
 The update function moves the sheep and wolves at random.  The sheep eat the environment and share with neighbours, whereas the wolves eat the sheep.  The results are plotted and animated with a scatterplot.  In my code sheep are represented by white dots and wolves by red dots.  
 
 The main programme obtains starting coordinate data for the sheep from a webpage, using BeautifulSoup to extract x and y classes.  Wolf starting positions are created in a similar manner, but adding the number of sheep to coordinate data to prevent duplication with sheep positions.  The programme initiates a Graphical User Interface in order to run the model.  The run command starts the animation for the set number of iterations.  As the model runs the number of remaining sheep is printed.  Finally the updated environment is written out as a csv file.
 
-There are two versions of the model in the repository:
-- a version with set input parameters [model_simple.py](https://github.com/geocoder21/githubintro/blob/main/model_simple.py)
-- a version with sliders, allowing the user to define starting parameters [model_sliders.py](https://github.com/geocoder21/githubintro/blob/main/model_sliders.py)
+
 
 
 Below is a screenshot of the plot after the model has run: in this instance there were 6 sheep left when the model completed.
