@@ -32,9 +32,9 @@ The version with sliders is the more up to date, however the simple model has be
 The model is organised into imports, parameters, functions, and then the main programme.  
 N.B. starting parameters are set at 10 sheep and 2 wolves, with 100 iterations, but this can be adjusted for different results.
 
-#### model functionality
+#### Model functionality
 
-Agents (sheep and wolves) are created and allocated a starting position, using data obtained from [a website](https://www.geog.leeds.ac.uk/courses/computing/practicals/python/agent-framework/part9/data.html), using BeautifulSoup to extract x and y classes.
+Agents (sheep and wolves) are created and allocated starting coordinates, using data obtained from [a website](https://www.geog.leeds.ac.uk/courses/computing/practicals/python/agent-framework/part9/data.html), using BeautifulSoup to extract x and y classes.
 
  The programme initiates a Graphical User Interface in order to run the model. Numbers of sheep and wolves are selected using sliders, and the run command starts the animation for the set number of iterations.  The update function moves the sheep and wolves at random.  The sheep eat the environment and share with neighbours, whereas the wolves eat the sheep. The results are plotted and animated with a scatterplot.  In my code sheep are represented by white dots and wolves by red dots. As the model runs the number of remaining sheep is printed.  Finally the updated environment is written out as a csv file.
 
@@ -42,6 +42,7 @@ Below is a screenshot of the plot after the model has run: in this instance ther
 
 ![Simple model](plotscreesnhot.jpeg)
 
+For further information on development, testing and known issues with this code please see [DEVELOPMENT.md]((https://github.com/geocoder21/githubintro/blob/main/DEVELOPMENT.md.py))
 
 ## Code repository
 
@@ -58,6 +59,6 @@ The code was developed using Spyder but could be run using any Python IDE.
 - in.txt                   <i> Environment data input, in csv format </i>
 - dataout.txt              <i> Environment data output, in csv format </i>
 - Readme.md                <i> This document </i>
-- Development.md           <i> Development of the model and further ideas</i>
+- DEVELOPMENT.md           <i> Development of the model and further ideas</i>
 - License                  <i> MIT license </i>
 </pre>
