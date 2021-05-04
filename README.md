@@ -42,7 +42,7 @@ Below is a screenshot of the plot after the model has run: in this instance ther
 
 ![Simple model](plotscreesnhot.jpeg)
 
-For further information on development, testing and known issues with this code please see [DEVELOPMENT.md]((https://github.com/geocoder21/githubintro/blob/main/DEVELOPMENT.md.py))
+For further information on development, testing and known issues with this code please see [DEVELOPMENT.md]((https://github.com/geocoder21/githubintro/blob/main/Development.md))
 
 ## Code repository
 
