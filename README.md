@@ -48,11 +48,9 @@ N.B. The model parameters are set at 10 sheep and 2 wolves, with 100 iterations,
 
 | Functions  | Info|
 |----------|-------|  
-update  | agents carry out their functions (above) for the defined number of iterations
-(cont.)        | results are plotted
+update  | agents carry out their functions (above) for the defined number of iterations, results are plotted
 run | agents are created and the plot animated 
-create_agents | sheep and wolves created using slider values
- (cont.)               | coordinated obtained from web and allocated to agents
+create_agents | sheep and wolves created using slider values, coordinated obtained from web and allocated to agents
 
 
 The update function moves the sheep and wolves at random.  The sheep eat the environment and share with neighbours, whereas the wolves eat the sheep.  The results are plotted and animated with a scatterplot.  In my code sheep are represented by white dots and wolves by red dots.  
