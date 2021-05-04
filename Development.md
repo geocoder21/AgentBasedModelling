@@ -17,7 +17,7 @@ When the model is executed through Spyder the animation runs within the GUI, but
 
 ## Ideas for further development
 
-1.  A number of global variables are currently used in order to share values between functions, however there is potential to clean the code up to remove some of these.
+1.  A number of global variables are currently used in order to share values between functions, however there is potential to refactor the code to remove some of these.
 
 2.  Introduction of an error message if parameters set to 0, or excessively high.
 
