@@ -63,8 +63,8 @@ def run():
 
 # slider function
 def slider():
-    sheep_button = tkinter.Label(root, text=sheep_slider.get()).pack()
-    wolf_button = tkinter.Label(root, text=wolf_slider.get()).pack()
+    num_sheep = tkinter.Scale(root, text=sheep_slider.get()).pack()
+    num_wolves = tkinter.Scale(root, text=wolf_slider.get()).pack()
 
 # ****************************************************************************
 # MAIN PROGRAMME
