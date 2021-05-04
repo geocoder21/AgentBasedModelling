@@ -40,7 +40,7 @@ Below is a screenshot of the plot after the model has run: in this instance ther
 
 ## Code repository
 
-<a href="https://github.com/geocoder21/AgentBasedModelling">AgentBasedModelling repository can be found here</a>
+<a href="https://github.com/geocoder21/githubintro"> The repository can be found here</a>
 
 The code was developed using Spyder but could be run using any Python IDE.
 
