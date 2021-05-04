@@ -49,7 +49,8 @@ The code was developed using Spyder but could be run using any Python IDE.
 
 ### Repository contents
 <pre>
-- model_final.py           <i>The model to be run </i>
+- model_simple.py          <i> Model - with preset parameters </i>
+- model_sliders.py         <i> Model - with user input parameters </i>
 - agentframework.py        <i> Agent class code </i>
 - Environment.py           <i> Environment code </i>
 - in.txt                   <i> Environment data in csv format </i>
