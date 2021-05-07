@@ -9,5 +9,5 @@ I am currently learning Python as part of a Geographical Information Science Mas
 
 <h2> My solution </h2>
 
-To see my solution please visit the code repository here: [https://github.com/geocoder21/AgentBasedModelling](https://github.com/geocoder21/AgentBasedModellingg/)
+To see my solution please visit the code repository here: [https://github.com/geocoder21/AgentBasedModelling](https://github.com/geocoder21/AgentBasedModelling/)
 
